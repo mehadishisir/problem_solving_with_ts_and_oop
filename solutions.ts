@@ -25,3 +25,14 @@ const checkType = (input: StringOrNumber):"String" | "Number"=>{
 }
 console.log(checkType("hello"))
 console.log(checkType(123))
+
+
+// problem--4
+
+const getProperty =<T> (obj:T,key:keyof T)=>{
+    return obj[key]
+}
+
+
+
+// problem--5
