@@ -36,3 +36,17 @@ const getProperty =<T> (obj:T,key:keyof T)=>{
 
 
 // problem--5
+
+interface Book {
+    title: string;
+    author: string;
+    publishedYear: number;
+}
+
+const toggleReadStatus =(bookObj:Book)=>{
+    return {
+        ...bookObj,
+        isRead: true
+    }
+}
+
