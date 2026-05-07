@@ -3,14 +3,16 @@
 const filterEvenNumbers= (numbers:number[]):number[]=>{
     return (numbers.filter(num=> num % 2 === 0))
 }
-filterEvenNumbers([1,2,3,4,5,6])
-// console.log(filterEvenNumbers([1, 2, 3, 4, 5, 6]))
+
+
 
 // problem -2
 const reverseString=(text:string):string=>{
     return text.split("").reverse().join("")
 }
-// console.log(reverseString("hello"))
+
+
+
 
 // problem -3
 
@@ -23,13 +25,12 @@ const checkType = (input: StringOrNumber):"String" | "Number"=>{
         return "Number";
     }
 }
-console.log(checkType("hello"))
-console.log(checkType(123))
+
 
 
 // problem--4
 
-const getProperty =<T> (obj:T,key:keyof T)=>{
+const getProperty =<T,X extends keyof T> (obj:T,key:X):T[X]=>{
     return obj[key]
 }
 
